@@ -28,7 +28,6 @@ var app = new Vue(
           }
           this.list.push(this.newElement);
           this.newElement = "";
-          console.log(this.list);
           this.list.sort();
         }
       },
