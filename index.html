@@ -30,6 +30,7 @@
     <input id="add" type="text" placeholder="Inserisci una nuova attività" v-model="newElement" v-on:keydown.enter="addNewElement">
     <button id="addItem" type="button" name="button" @click="addNewElement">Aggiungi</button>
     <button id="newList" type="button" name="button" @click="clearList"><i class="fas fa-trash-alt"></i></button>
+    <button id="random" type="button" name="button" @click="removeRandom"><i class="fas fa-trash-alt" ></i></button>
     <!-- /add & delete element -->
   </div>
   <script src="js/script.js" charset="utf-8"></script>

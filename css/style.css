@@ -63,7 +63,7 @@ body {
 /* /add in list */
 
 /* buttons for add and delete */
-#addItem, #newList {
+#addItem, #newList, #random {
   padding: 10px;
   background-color: #009e4c;
   color: white;
@@ -78,12 +78,19 @@ body {
   background-color: #04c25f;
 }
 
-#newList {
+#newList, #random {
   padding: 10px 12px;
   background-color: #d10606;
 }
 #newList:hover {
   background-color: #ed1000;
+}
+
+#random {
+  background-color: #085fbd;
+}
+#random:hover {
+  background-color: #0573eb;
 }
 /* /buttons for add and delete */
 

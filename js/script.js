@@ -1,6 +1,7 @@
 var app = new Vue(
   {
     el: "#root",
+    // DATA ELEMENT
     data: {
       list: [
         "leggere la traccia dell'esercizio",
@@ -19,15 +20,16 @@ var app = new Vue(
       this.list.sort();
       this.listFiltered = this.list;
     },
-    mounted: function() {
-      setTimeout(
-        () => {
-          this.listFiltered.splice(this.getRandomNumber(app.listFiltered.length),1);
-        }
-      ,3000);
-
-    },
+    // FUNCTIONS
     methods: {
+      // SetTimeOut random
+      removeRandom: function() {
+        setTimeout(
+          () => {
+            this.listFiltered.splice(this.getRandomNumber(app.listFiltered.length),1);
+          }
+        ,3000);
+      },
       getRandomNumber: function(index) {
         return Math.floor(Math.random() * (index - 1));
       },
