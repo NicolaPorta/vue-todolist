@@ -18,7 +18,7 @@ var app = new Vue(
         this.list.push(this.newElement);
       },
       remove: function (index){
-        this.list.splice(index);
+        this.list.splice(index,index + 1);
       }
     }
   }
