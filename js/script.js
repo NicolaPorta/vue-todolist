@@ -10,7 +10,8 @@ var app = new Vue(
         "Pushare l'esercizio",
         "Riposare con una birra"
       ],
-      newElement:""
+      newElement:"",
+      deleteState:""
     },
     methods: {
       addNewElement: function() {
@@ -21,11 +22,8 @@ var app = new Vue(
       remove: function (index){
         this.list.splice(index,1);
         if (this.list.length == 0) {
-          setTimeout(
-            function() {
-              alert("BRAVO, HAI FATTO TUTTO QUELLO CHE TI ERI PREFISSATO");
-            },500
-          );
+          this.list[index] = "BRAVO, HAI FATTO TUTTO QUELLO CHE TI ERI PREFISSATO";
+          this.deleteState = "delete";
         }
       }
     }
