@@ -16,7 +16,8 @@ var app = new Vue(
     methods: {
       addNewElement: function() {
         if(this.newElement != "") {
-          if(this.list[0] = "BRAVO, HAI FATTO TUTTO!!!") {
+          this.deleteState = "";
+          if(this.list[0] == "BRAVO, HAI FATTO TUTTO!!!") {
             this.list.splice(0,1);
           }
           this.list.push(this.newElement);
