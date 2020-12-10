@@ -37,7 +37,7 @@ var app = new Vue(
       addNewElement: function() {
         if(this.newElement != "") {
           this.deleteState = "";
-          if(this.list[0] == "BRAVO, HAI FATTO TUTTO!!!") {
+          if(this.list[0] == "NESSUNA ATTIVITA' IN PROGRAMMA") {
             this.list.splice(0,1);
           }
           this.listFiltered.push(this.newElement);
@@ -49,7 +49,7 @@ var app = new Vue(
       remove: function(index) {
         this.listFiltered.splice(index,1);
         if (this.list.length == 0) {
-          this.list[index] = "BRAVO, HAI FATTO TUTTO!!!";
+          this.list[index] = "NESSUNA ATTIVITA' IN PROGRAMMA";
           this.deleteState = "delete";
         }
       },
