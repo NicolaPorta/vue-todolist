@@ -20,7 +20,7 @@ body {
 .delete {
   display: none;
 }
-/* general */
+/* /general */
 
 /* search in list */
 #search {
@@ -37,7 +37,7 @@ body {
   background-repeat: no-repeat;
   vertical-align: middle;
 }
-/* search in list */
+/* /search in list */
 
 /* add in list */
 #add, #search {
@@ -60,7 +60,7 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   width: 500px;
 }
-/* add in list */
+/* /add in list */
 
 /* buttons for add and delete */
 #addItem, #newList {
@@ -85,7 +85,7 @@ body {
 #newList:hover {
   background-color: #ed1000;
 }
-/* buttons for add and delete */
+/* /buttons for add and delete */
 
 /* list of ToDo */
 #list {
@@ -116,4 +116,4 @@ body {
 #list > li:hover > i {
   opacity: 1;
 }
-/* list of toDo */
+/* /list of toDo */

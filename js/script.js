@@ -19,7 +19,18 @@ var app = new Vue(
       this.list.sort();
       this.listFiltered = this.list;
     },
+    mounted: function() {
+      setTimeout(
+        () => {
+          this.listFiltered.splice(this.getRandomNumber(app.listFiltered.length),1);
+        }
+      ,3000);
+
+    },
     methods: {
+      getRandomNumber: function(index) {
+        return Math.floor(Math.random() * (index - 1));
+      },
       // add element on list
       addNewElement: function() {
         if(this.newElement != "") {

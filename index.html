@@ -3,23 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <!-- VUE CDN -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <!-- CSS LINK -->
   <link rel="stylesheet" href="css/style.css">
   <title>ToDoVue</title>
 </head>
 <body>
   <h1>To Do List</h1>
   <div id="root">
+    <!-- search bar -->
     <input id="search" type="text" name="" value="" v-model="search" v-on:keydown.enter="filterList" placeholder=" ">
+    <!-- /search bar -->
+
+    <!-- list -->
     <ul id="list">
       <li v-for="(element, index) in listFiltered">{{element}}<i :class="deleteState" class="fas fa-trash-alt" @click="remove(index)"></i></li>
     </ul>
+    <!-- /list -->
+
+    <!-- add & delete element -->
     <input id="add" type="text" placeholder="Inserisci una nuova attività" v-model="newElement" v-on:keydown.enter="addNewElement">
     <button id="addItem" type="button" name="button" @click="addNewElement">Aggiungi</button>
     <button id="newList" type="button" name="button" @click="clearList"><i class="fas fa-trash-alt"></i></button>
+    <!-- /add & delete element -->
   </div>
   <script src="js/script.js" charset="utf-8"></script>
 </body>
