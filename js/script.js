@@ -30,6 +30,7 @@ var app = new Vue(
           }
         ,3000);
       },
+      // Random Number Generator
       getRandomNumber: function(index) {
         return Math.floor(Math.random() * (index - 1));
       },
