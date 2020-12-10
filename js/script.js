@@ -10,10 +10,11 @@ var app = new Vue(
         "Pushare l'esercizio",
         "Riposare con una birra"
       ],
-      newElement:"ciao"
+      newElement:""
     },
     methods: {
       addNewElement: function() {
+        if(this.newElement != "")
         this.list.push(this.newElement);
       },
       remove: function (index){
