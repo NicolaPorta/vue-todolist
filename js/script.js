@@ -29,7 +29,6 @@ var app = new Vue(
         if (this.list.length == 0) {
           this.list[index] = "BRAVO, HAI FATTO TUTTO!!!";
           this.deleteState = "delete";
-          console.log(index);
         }
       }
     }
