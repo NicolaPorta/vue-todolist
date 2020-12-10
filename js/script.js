@@ -3,15 +3,18 @@ var app = new Vue(
     el: "#root",
     data: {
       list: [
-        "Leggere la traccia dell'esercizio",
-        "Impostare link e script della pagina HTML",
-        "Programmare la pagina Jscript",
-        "Fare il refactoring",
-        "Pushare l'esercizio",
-        "Riposare con una birra"
+        "leggere la traccia dell'esercizio",
+        "impostare link e script della pagina HTML",
+        "programmare la pagina Jscript",
+        "fare il refactoring",
+        "pushare l'esercizio",
+        "riposare con una birra"
       ],
       newElement:"",
       deleteState:""
+    },
+    created: function() {
+      this.list.sort();
     },
     methods: {
       addNewElement: function() {
@@ -22,6 +25,8 @@ var app = new Vue(
           }
           this.list.push(this.newElement);
           this.newElement = "";
+          console.log(this.list);
+          this.list.sort();
         }
       },
       remove: function(index) {
