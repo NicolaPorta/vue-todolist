@@ -31,9 +31,6 @@ body {
   background-repeat: no-repeat;
   vertical-align: middle;
 }
-#search:focus-within {
-  width: 400px;
-}
 
 #add, #search {
   padding: 10px;
@@ -47,10 +44,10 @@ body {
   width: 300px;
   border-radius: 30px;
 }
-#add:hover {
+#add:hover, #search:hover {
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
 }
-#add:focus-within {
+#add:focus-within, #search:focus-within {
   box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.9);
   width: 500px;
@@ -95,13 +92,13 @@ body {
 #list > li > i {
   font-size: 30px;
   cursor: pointer;
-  color: grey;
+  color: black;
   transition: all 0.6s;
   padding: 0 20px;
   opacity: 0;
 }
 #list > li > i:hover {
-  color: black;
+  color: #d10606;
 }
 #list > li:hover > i {
   opacity: 1;
