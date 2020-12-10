@@ -27,14 +27,14 @@ var app = new Vue(
           if(this.list[0] == "BRAVO, HAI FATTO TUTTO!!!") {
             this.list.splice(0,1);
           }
-          this.list.push(this.newElement);
+          this.listFiltered.push(this.newElement);
           this.newElement = "";
           this.listFiltered.sort();
         }
       },
       // remove element on list
       remove: function(index) {
-        this.list.splice(index,1);
+        this.listFiltered.splice(index,1);
         if (this.list.length == 0) {
           this.list[index] = "BRAVO, HAI FATTO TUTTO!!!";
           this.deleteState = "delete";
@@ -47,7 +47,7 @@ var app = new Vue(
       // filter in list
       filterList: function() {
         if (this.search != "") {
-          this.listFiltered = this.list.filter(
+          this.listFiltered = this.listFiltered.filter(
             (element)=> element.includes(this.search)
           );
         } else this.listFiltered = this.list;
