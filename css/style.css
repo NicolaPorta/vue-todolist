@@ -1,3 +1,4 @@
+/* general */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +6,6 @@
 }
 
 body {
-  height: 100vh;
   font-size: 40px;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,12 @@ body {
   background-size: cover;
 }
 
+.delete {
+  display: none;
+}
+/* general */
+
+/* search in list */
 #search {
   width: 50px;
   height: 50px;
@@ -31,7 +37,9 @@ body {
   background-repeat: no-repeat;
   vertical-align: middle;
 }
+/* search in list */
 
+/* add in list */
 #add, #search {
   padding: 10px;
   font-size: 20px;
@@ -52,7 +60,9 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   width: 500px;
 }
+/* add in list */
 
+/* buttons for add and delete */
 #addItem, #newList {
   padding: 10px;
   background-color: #009e4c;
@@ -75,9 +85,12 @@ body {
 #newList:hover {
   background-color: #ed1000;
 }
+/* buttons for add and delete */
 
+/* list of ToDo */
 #list {
   height: 400px;
+  overflow-y: auto;
   min-width: 800px;
   margin-top: 30px;
   list-style: none;
@@ -103,7 +116,4 @@ body {
 #list > li:hover > i {
   opacity: 1;
 }
-
-.delete {
-  display: none;
-}
+/* list of toDo */

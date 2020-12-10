@@ -20,6 +20,7 @@ var app = new Vue(
       this.listFiltered = this.list;
     },
     methods: {
+      // add element on list
       addNewElement: function() {
         if(this.newElement != "") {
           this.deleteState = "";
@@ -28,9 +29,10 @@ var app = new Vue(
           }
           this.list.push(this.newElement);
           this.newElement = "";
-          this.list.sort();
+          this.listFiltered.sort();
         }
       },
+      // remove element on list
       remove: function(index) {
         this.list.splice(index,1);
         if (this.list.length == 0) {
@@ -38,9 +40,11 @@ var app = new Vue(
           this.deleteState = "delete";
         }
       },
+      // delete all element on list
       clearList: function() {
         this.listFiltered = [];
       },
+      // filter in list
       filterList: function() {
         if (this.search != "") {
           this.listFiltered = this.list.filter(
