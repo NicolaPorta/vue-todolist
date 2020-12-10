@@ -12,9 +12,6 @@ var app = new Vue(
       ],
       newElement:""
     },
-    mounted: function() {
-
-    },
     methods: {
       addNewElement: function() {
         if(this.newElement != "")
@@ -27,7 +24,8 @@ var app = new Vue(
           setTimeout(
             function() {
               alert("BRAVO, HAI FATTO TUTTO QUELLO CHE TI ERI PREFISSATO");
-            },500)
+            },500
+          );
         }
       }
     }
