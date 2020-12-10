@@ -61,9 +61,11 @@ body {
 
 #list {
   height: 400px;
+  min-width: 800px;
   margin-top: 30px;
   list-style: none;
   text-align: left;
+  margin-bottom: 50px;
 }
 #list > li {
   margin: 25px;
