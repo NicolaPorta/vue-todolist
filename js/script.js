@@ -12,6 +12,9 @@ var app = new Vue(
       ],
       newElement:""
     },
+    mounted: function() {
+
+    },
     methods: {
       addNewElement: function() {
         if(this.newElement != "")
@@ -20,6 +23,12 @@ var app = new Vue(
       },
       remove: function (index){
         this.list.splice(index,1);
+        if (this.list.length == 0) {
+          setTimeout(
+            function() {
+              alert("BRAVO, HAI FATTO TUTTO QUELLO CHE TI ERI PREFISSATO");
+            },500)
+        }
       }
     }
   }
