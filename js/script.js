@@ -39,7 +39,7 @@ var app = new Vue(
         }
       },
       clearList: function() {
-        this.list = [];
+        this.listFiltered = [];
       },
       filterList: function() {
         if (this.search != "") {
