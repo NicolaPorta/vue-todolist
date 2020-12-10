@@ -11,10 +11,13 @@ var app = new Vue(
         "riposare con una birra"
       ],
       newElement:"",
-      deleteState:""
+      deleteState:"",
+      search: "",
+      listFiltered:""
     },
     created: function() {
       this.list.sort();
+      this.listFiltered = this.list;
     },
     methods: {
       addNewElement: function() {
@@ -38,6 +41,13 @@ var app = new Vue(
       },
       clearList: function() {
         this.list = [];
+      },
+      filterList: function() {
+        if (this.search != "") {
+          this.listFiltered = this.list.filter(
+            (element)=> element.includes(this.search)
+          );
+        } else this.listFiltered = this.list;
       }
     }
   }

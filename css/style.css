@@ -17,7 +17,7 @@ body {
   background-size: cover;
 }
 
-#add {
+#add, #search {
   width: 300px;
   border-radius: 30px;
   padding: 10px;

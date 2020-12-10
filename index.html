@@ -13,11 +13,12 @@
 <body>
   <h1>To Do List</h1>
   <div id="root">
+    <input id="search" type="text" name="" value="" v-model="search" v-on:keydown.enter="filterList">
     <input id="add" type="text" placeholder="Inserisci una nuova attività" v-model="newElement" v-on:keydown.enter="addNewElement">
     <button id="addItem" type="button" name="button" @click="addNewElement">Aggiungi</button>
     <button id="newList" type="button" name="button" @click="clearList"><i class="fas fa-trash-alt"></i></button>
     <ul id="list">
-      <li v-for="(element, index) in list">{{element}}<i :class="deleteState" class="fas fa-trash-alt" @click="remove(index)"></i></li>
+      <li v-for="(element, index) in listFiltered">{{element}}<i :class="deleteState" class="fas fa-trash-alt" @click="remove(index)"></i></li>
     </ul>
   </div>
   <script src="js/script.js" charset="utf-8"></script>
