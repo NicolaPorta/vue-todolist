@@ -16,9 +16,10 @@ var app = new Vue(
       addNewElement: function() {
         if(this.newElement != "")
         this.list.push(this.newElement);
+        this.newElement = "";
       },
       remove: function (index){
-        this.list.splice(index,index + 1);
+        this.list.splice(index,1);
       }
     }
   }

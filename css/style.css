@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#add {
+  min-width: 400px;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#addItem {
+  padding: 10px;
+  background-color: lightgrey;
+  color: black;
+  transition: all 0.6s;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#addItem:hover {
+  background-color: black;
+  color: lightgrey;
+}
+
+#list {
+  height: 400px;
+  overflow-y: auto;
+  margin-top: 30px;
+  list-style: none;
+}
+
+#list > li {
+  margin: 25px;
+  text-transform: capitalize;
+}
+
+#list > li > span {
+  cursor: pointer;
+  color: lightgrey;
+  transition: color 0.6s;
+  margin: 10px;
+}
+
+#list > li > span:hover {
+  color: black;
+}
