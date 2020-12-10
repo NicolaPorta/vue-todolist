@@ -15,6 +15,7 @@
   <div id="root">
     <input id="add" type="text" placeholder="Inserisci una nuova attività" v-model="newElement" v-on:keydown.enter="addNewElement">
     <button id="addItem" type="button" name="button" @click="addNewElement">Aggiungi</button>
+    <button id="newList" type="button" name="button" @click="clearList"><i class="fas fa-trash-alt"></i></button>
     <ul id="list">
       <li v-for="(element, index) in list">{{element}}<i :class="deleteState" class="fas fa-trash-alt" @click="remove(index)"></i></li>
     </ul>

@@ -24,12 +24,15 @@ var app = new Vue(
           this.newElement = "";
         }
       },
-      remove: function (index){
+      remove: function(index) {
         this.list.splice(index,1);
         if (this.list.length == 0) {
           this.list[index] = "BRAVO, HAI FATTO TUTTO!!!";
           this.deleteState = "delete";
         }
+      },
+      clearList: function() {
+        this.list = [];
       }
     }
   }
